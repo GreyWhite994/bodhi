@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x^od7_ocni&4wcms8ui&grixv@0$t54t30dd30_4x5_1_odd16
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-greywhite994-bodhi-rpns241j2c4.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-greywhite994-bodhi-rpns241j2c4.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,10 @@ ROOT_URLCONF = 'bodhi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
