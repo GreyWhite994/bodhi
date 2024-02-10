@@ -17,10 +17,8 @@
                 Training Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
-                <a href="" class="dropdown-item">Yoga Mats</a>
-                <a href="" class="dropdown-item">Training Gear</a>
-                <a href="" class="dropdown-item">Other</a>
-                <a href="" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=yoga_equipment" class="dropdown-item">Yoga Gear</a>
+                <a href="{% url 'products' %}?category=clothing" class="dropdown-item">All Clothing</a>
             </div>
         </li>
 
@@ -29,8 +27,7 @@
                 Memberships
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="membership-link">
-                <a href="" class="dropdown-item">Membership Deals</a>
-                <a href="" class="dropdown-item">All Memberships</a>
+                <a href="{% url 'products' %}?category=memberships" class="dropdown-item">All Memberships</a>
             </div>
         </li>
 
@@ -39,10 +36,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=all_specials" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
